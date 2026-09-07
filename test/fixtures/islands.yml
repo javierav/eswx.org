@@ -1,0 +1,14 @@
+gran_canaria:
+  ine_code: "352"
+  name: Gran Canaria
+  province: las_palmas
+
+ibiza:
+  ine_code: "072"
+  name: Ibiza
+  province: baleares
+
+formentera:
+  ine_code: "071"
+  name: Formentera
+  province: baleares
