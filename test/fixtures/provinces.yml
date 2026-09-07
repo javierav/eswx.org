@@ -1,0 +1,19 @@
+navarra:
+  ine_code: "31"
+  name: Navarra
+  region: navarra
+
+cadiz:
+  ine_code: "11"
+  name: Cádiz
+  region: andalucia
+
+las_palmas:
+  ine_code: "35"
+  name: Las Palmas
+  region: canarias
+
+baleares:
+  ine_code: "07"
+  name: Illes Balears
+  region: baleares

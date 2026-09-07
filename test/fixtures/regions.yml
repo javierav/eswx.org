@@ -1,0 +1,19 @@
+navarra:
+  ine_code: "15"
+  name: Comunidad Foral de Navarra
+  time_zone: Europe/Madrid
+
+andalucia:
+  ine_code: "01"
+  name: Andalucía
+  time_zone: Europe/Madrid
+
+canarias:
+  ine_code: "05"
+  name: Canarias
+  time_zone: Atlantic/Canary
+
+baleares:
+  ine_code: "04"
+  name: Illes Balears
+  time_zone: Europe/Madrid

@@ -1,0 +1,25 @@
+jerez:
+  ine_code: "11020"
+  name: Jerez de la Frontera
+  normalized_name: jerez de la frontera
+  province: cadiz
+
+alcala:
+  ine_code: "11002"
+  name: Alcalá del Valle
+  normalized_name: alcala del valle
+  province: cadiz
+
+burguete:
+  ine_code: "31058"
+  name: Auritz/Burguete
+  normalized_name: auritz/burguete
+  province: navarra
+
+# Municipio insular: lleva isla, a diferencia de los peninsulares.
+sant_antoni:
+  ine_code: "07046"
+  name: Sant Antoni de Portmany
+  normalized_name: sant antoni de portmany
+  province: baleares
+  island: ibiza
