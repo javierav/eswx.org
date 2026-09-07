@@ -1,0 +1,22 @@
+<% content_for :title, t(".title") %>
+<article class="detail">
+  <p class="detail__back"><%= link_to t("weather_alerts.back"), root_path %></p>
+  <h1><%= t(".title") %></h1>
+  <%= form_with url: municipalities_path, method: :get, class: "search" do |form| %>
+    <%= form.label :q, t(".label") %>
+    <%= form.search_field :q, value: @query, placeholder: t(".placeholder"), autofocus: true %>
+    <%= form.submit t(".submit") %>
+  <% end %>
+
+  <% if @query.present? %>
+    <ul class="municipalities">
+      <% @municipalities.each do |municipality| %>
+        <li>
+          <%= link_to municipality.name, municipality_path(municipality) %>
+          <span class="municipalities__province"><%= municipality.province.name %></span>
+        </li>
+      <% end %>
+    </ul>
+    <% if @municipalities.empty? %><p><%= t(".empty", query: @query) %></p><% end %>
+  <% end %>
+</article>

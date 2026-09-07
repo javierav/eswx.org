@@ -1,0 +1,78 @@
+# Aviso en vigor, emitido hace un rato y todavía sin caducar.
+active_yellow:
+  identifier: "2.49.0.0.724.0.ES.20260906080000.743103ATTA0719ACTIVO"
+  msg_type: Alert
+  status: Actual
+  sent: <%= 3.hours.ago.utc.iso8601 %>
+  referenced_identifiers: ""
+  effective: <%= 3.hours.ago.utc.iso8601 %>
+  onset: <%= 2.hours.ago.utc.iso8601 %>
+  expires: <%= 6.hours.from_now.utc.iso8601 %>
+  severity: Moderate
+  level: amarillo
+  phenomenon_code: AT
+  phenomenon_name: Temperaturas máximas
+  parameter: "Temperatura máxima: 34 ºC"
+  probability: 40%-70%
+  event: Aviso de temperaturas máximas de nivel amarillo
+  headline: Aviso de temperaturas máximas de nivel amarillo. Pirineo navarro
+  weather_zone: pirineo_navarro
+  raw_cap: "<alert/>"
+
+# Ya caducado: sigue siendo la última versión, pero su vigencia terminó.
+expired:
+  identifier: "2.49.0.0.724.0.ES.20260905080000.743103ATTA0719CADUCADO"
+  msg_type: Alert
+  status: Actual
+  sent: <%= 2.days.ago.utc.iso8601 %>
+  referenced_identifiers: ""
+  effective: <%= 2.days.ago.utc.iso8601 %>
+  onset: <%= 2.days.ago.utc.iso8601 %>
+  expires: <%= 1.day.ago.utc.iso8601 %>
+  severity: Moderate
+  level: amarillo
+  phenomenon_code: AT
+  phenomenon_name: Temperaturas máximas
+  event: Aviso de temperaturas máximas de nivel amarillo
+  headline: Aviso de temperaturas máximas de nivel amarillo. Pirineo navarro
+  weather_zone: pirineo_navarro
+  raw_cap: "<alert/>"
+
+# Naranja sustituido por el rojo de abajo: cubre el mismo instante, pero AEMET dejó
+# de darlo por bueno a las tres horas de emitirlo.
+superseded_orange:
+  identifier: "2.49.0.0.724.0.ES.20260906060000.611102PRP10621NARANJA"
+  msg_type: Alert
+  status: Actual
+  sent: <%= 6.hours.ago.utc.iso8601 %>
+  referenced_identifiers: ""
+  effective: <%= 6.hours.ago.utc.iso8601 %>
+  onset: <%= 5.hours.ago.utc.iso8601 %>
+  expires: <%= 5.hours.from_now.utc.iso8601 %>
+  superseded_at: <%= 3.hours.ago.utc.iso8601 %>
+  severity: Severe
+  level: naranja
+  phenomenon_code: PR
+  phenomenon_name: Lluvias
+  event: Aviso de lluvias de nivel naranja
+  headline: Aviso de lluvias de nivel naranja. Campiña gaditana
+  weather_zone: campina_gaditana
+  raw_cap: "<alert/>"
+
+current_red:
+  identifier: "2.49.0.0.724.0.ES.20260906090000.611102PRP10621ROJO"
+  msg_type: Update
+  status: Actual
+  sent: <%= 3.hours.ago.utc.iso8601 %>
+  referenced_identifiers: "2.49.0.0.724.0.ES.20260906060000.611102PRP10621NARANJA"
+  effective: <%= 3.hours.ago.utc.iso8601 %>
+  onset: <%= 3.hours.ago.utc.iso8601 %>
+  expires: <%= 5.hours.from_now.utc.iso8601 %>
+  severity: Extreme
+  level: rojo
+  phenomenon_code: PR
+  phenomenon_name: Lluvias
+  event: Aviso de lluvias de nivel rojo
+  headline: Aviso de lluvias de nivel rojo. Campiña gaditana
+  weather_zone: campina_gaditana
+  raw_cap: "<alert/>"

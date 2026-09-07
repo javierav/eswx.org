@@ -28,6 +28,11 @@ module Platform
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w[assets tasks])
 
+    config.i18n.default_locale = :es
+    # Todo se guarda en UTC: Canarias y la Península no comparten hora, así que
+    # cada aviso se muestra en la hora local de su zona, no en la del servidor.
+    config.time_zone = "UTC"
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

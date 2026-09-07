@@ -2,13 +2,17 @@ gran_canaria:
   ine_code: "352"
   name: Gran Canaria
   province: las_palmas
+  weather_territory: gran_canaria
 
+# Ibiza y Formentera son dos islas para el INE y un solo territorio para AEMET.
 ibiza:
   ine_code: "072"
   name: Ibiza
   province: baleares
+  weather_territory: ibiza_formentera
 
 formentera:
   ine_code: "071"
   name: Formentera
   province: baleares
+  weather_territory: ibiza_formentera

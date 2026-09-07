@@ -1,0 +1,16 @@
+<%# Mapa en SVG generado en el servidor: los caminos vienen precalculados en cada
+    zona, así que aquí solo se colorean. Canarias ya viene trasladada a su recuadro. %>
+<svg class="map" viewBox="<%= MapProjection::VIEW_BOX %>" role="img"
+     aria-label="<%= t("weather_alerts.map.label") %>">
+  <rect class="map__inset" x="<%= MapProjection::CANARY_INSET[:x] %>" y="<%= MapProjection::CANARY_INSET[:y] %>"
+        width="<%= MapProjection::CANARY_INSET[:width] %>" height="<%= MapProjection::CANARY_INSET[:height] %>"
+        rx="8" />
+  <% board.zones.each do |zone| %>
+    <% level = board.level_for(zone) %>
+    <a href="<%= weather_zone_path(zone) %>">
+      <path class="map__zone<%= " map__zone--#{level}" if level %>" d="<%= zone.svg_path %>">
+        <title><%= zone.name %><%= " — #{t("weather_alerts.levels.#{level}")}" if level %></title>
+      </path>
+    </a>
+  <% end %>
+</svg>

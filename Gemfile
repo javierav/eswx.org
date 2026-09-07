@@ -3,6 +3,10 @@ source "https://rubygems.org"
 # Use main development branch of Rails
 gem "rails", github: "rails/rails", branch: "main"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
+# Ya venía en el lock como dependencia de rails-html-sanitizer; se declara porque
+# Aemet::CapMessage la usa directamente.
+gem "nokogiri"
+
 # Ya no viene con Ruby. Las semillas leen los datos de referencia de db/seeds/*.csv.
 gem "csv"
 

@@ -1,0 +1,234 @@
+code,name,coastal,weather_territory_code
+610401,Valle del Almanzora y Los Vélez,false,6104
+610402,Nacimiento y Campo de Tabernas,false,6104
+610403,Poniente y Almería Capital,false,6104
+610403C,Costa - Poniente y Almería Capital,true,6104
+610404,Levante almeriense,false,6104
+610404C,Costa - Levante almeriense,true,6104
+611101,Grazalema,false,6111
+611102,Campiña gaditana,false,6111
+611103,Litoral gaditano,false,6111
+611103C,Costa - Litoral gaditano,true,6111
+611104,Estrecho,false,6111
+611104C,Costa - Estrecho,true,6111
+611401,Sierra y Pedroches,false,6114
+611402,Campiña cordobesa,false,6114
+611403,Subbética cordobesa,false,6114
+611801,Cuenca del Genil,false,6118
+611802,Guadix y Baza,false,6118
+611803,Nevada y Alpujarras,false,6118
+611804,Costa granadina,false,6118
+611804C,Costa - Costa granadina,true,6118
+612101,Aracena,false,6121
+612102,Andévalo y Condado,false,6121
+612103,Litoral de Huelva,false,6121
+612103C,Costa - Litoral de Huelva,true,6121
+612301,Morena y Condado,false,6123
+612302,Cazorla y Segura,false,6123
+612303,Valle del Guadalquivir de Jaén,false,6123
+612304,Capital y Montes de Jaén,false,6123
+612901,Antequera,false,6129
+612902,Ronda,false,6129
+612903,Sol y Guadalhorce,false,6129
+612903C,Costa - Sol y Guadalhorce,true,6129
+612904,Axarquía,false,6129
+612904C,Costa - Axarquía,true,6129
+614101,Sierra norte de Sevilla,false,6141
+614102,Campiña sevillana,false,6141
+614103,Sierra sur de Sevilla,false,6141
+622201,Pirineo oscense,false,6222
+622202,Centro de Huesca,false,6222
+622203,Sur de Huesca,false,6222
+624401,Albarracín y Jiloca,false,6244
+624402,Gúdar y Maestrazgo,false,6244
+624403,Bajo Aragón de Teruel,false,6244
+625001,Cinco Villas de Zaragoza,false,6250
+625002,Ibérica zaragozana,false,6250
+625003,Ribera del Ebro de Zaragoza,false,6250
+633301,Litoral occidental asturiano,false,6333
+633301C,Costa - Litoral occidental asturiano,true,6333
+633302,Litoral oriental asturiano,false,6333
+633302C,Costa - Litoral oriental asturiano,true,6333
+633303,Suroccidental asturiana,false,6333
+633304,Central y Valles Mineros,false,6333
+633305,Cordillera y Picos de Europa,false,6333
+645301,Ibiza y Formentera,false,6453
+645301C,Costa - Ibiza y Formentera,true,6453
+645401,Sierra Tramontana,false,6454
+645401C,Costa - Sierra Tramontana,true,6454
+645402,Norte y nordeste de Mallorca,false,6454
+645402C,Costa - Norte y nordeste de Mallorca,true,6454
+645403,Interior de Mallorca,false,6454
+645404,Sur de Mallorca,false,6454
+645404C,Costa - Sur de Mallorca,true,6454
+645405,Levante mallorquín,false,6454
+645405C,Costa - Levante mallorquín,true,6454
+645501,Menorca,false,6455
+645501C,Costa - Menorca,true,6455
+659001,Norte de Gran Canaria,false,6590
+659001C,Costa - Norte de Gran Canaria,true,6590
+659003,Cumbres de Gran Canaria,false,6590
+659004,"Este, sur y oeste de Gran Canaria",false,6590
+659004C,"Costa - Este, sur y oeste de Gran Canaria",true,6590
+659101,Lanzarote,false,6591
+659101C,Costa - Lanzarote,true,6591
+659201,Fuerteventura,false,6592
+659201C,Costa - Fuerteventura,true,6592
+659302,Cumbres de La Palma,false,6593
+659303,Este de La Palma,false,6593
+659303C,Costa - Este de La Palma,true,6593
+659304,Oeste de La Palma,false,6593
+659304C,Costa - Oeste de La Palma,true,6593
+659401,La Gomera,false,6594
+659401C,Costa - La Gomera,true,6594
+659501,El Hierro,false,6595
+659501C,Costa - El Hierro,true,6595
+659601,Norte de Tenerife,false,6596
+659601C,Costa - Norte de Tenerife,true,6596
+659602,Área metropolitana de Tenerife,false,6596
+659602C,Costa - Área metropolitana de Tenerife,true,6596
+659603,"Este, sur y oeste de Tenerife",false,6596
+659603C,"Costa - Este, sur y oeste de Tenerife",true,6596
+663901,Litoral cántabro,false,6639
+663901C,Costa - Litoral cántabro,true,6639
+663902,Liébana,false,6639
+663903,Centro y valle de Villaverde,false,6639
+663904,Cantabria del Ebro,false,6639
+670501,Meseta de Ávila,false,6705
+670502,Sistema Central de Ávila,false,6705
+670503,Sur de Ávila,false,6705
+670901,Cordillera Cantábrica de Burgos,false,6709
+670902,Norte de Burgos,false,6709
+670903,Condado de Treviño,false,6709
+670904,Meseta de Burgos,false,6709
+670905,Ibérica de Burgos,false,6709
+672401,Cordillera Cantábrica de León,false,6724
+672402,Bierzo de León,false,6724
+672403,Meseta de León,false,6724
+673401,Cordillera Cantábrica de Palencia,false,6734
+673402,Meseta de Palencia,false,6734
+673701,Meseta de Salamanca,false,6737
+673702,Sistema Central de Salamanca,false,6737
+673703,Sur de Salamanca,false,6737
+674001,Meseta de Segovia,false,6740
+674002,Sistema Central de Segovia,false,6740
+674201,Ibérica de Soria,false,6742
+674202,Meseta de Soria,false,6742
+674203,Sistema Central de Soria,false,6742
+674701,Meseta de Valladolid,false,6747
+674901,Sanabria,false,6749
+674902,Meseta de Zamora,false,6749
+680201,La Mancha albaceteña,false,6802
+680202,Alcaraz y Segura,false,6802
+680203,Hellín y Almansa,false,6802
+681301,Montes del norte y Anchuras,false,6813
+681302,La Mancha de Ciudad Real,false,6813
+681303,Valle del Guadiana,false,6813
+681304,Sierras de Alcudia y Madrona,false,6813
+681601,Alcarria conquense,false,6816
+681602,Serranía de Cuenca,false,6816
+681603,La Mancha conquense,false,6816
+681901,Serranía de Guadalajara,false,6819
+681902,Parameras de Molina,false,6819
+681903,Alcarria de Guadalajara,false,6819
+684501,Sierra de San Vicente,false,6845
+684502,Valle del Tajo,false,6845
+684503,Montes de Toledo,false,6845
+684504,La Mancha toledana,false,6845
+690801,Prepirineo de Barcelona,false,6908
+690802,Depresión central de Barcelona,false,6908
+690803,Prelitoral de Barcelona,false,6908
+690804,Litoral de Barcelona,false,6908
+690804C,Costa - Litoral de Barcelona,true,6908
+691701,Pirineo de Girona,false,6917
+691702,Prelitoral de Girona,false,6917
+691703,Ampurdán,false,6917
+691703C,Costa - Ampurdán,true,6917
+691704,Litoral sur de Girona,false,6917
+691704C,Costa - Litoral sur de Girona,true,6917
+692501,Valle de Arán,false,6925
+692502,Pirineo de Lleida,false,6925
+692503,Depresión central de Lleida,false,6925
+694301,Depresión central de Tarragona,false,6943
+694302,Prelitoral norte de Tarragona,false,6943
+694303,Litoral norte de Tarragona,false,6943
+694303C,Costa - Litoral norte de Tarragona,true,6943
+694304,Litoral sur de Tarragona,false,6943
+694304C,Costa - Litoral sur de Tarragona,true,6943
+694305,Prelitoral sur de Tarragona,false,6943
+700601,Vegas del Guadiana,false,7006
+700602,La Siberia extremeña,false,7006
+700603,Barros y Serena,false,7006
+700604,Sur de Badajoz,false,7006
+701001,Norte de Cáceres,false,7010
+701002,Tajo y Alagón,false,7010
+701003,Meseta cacereña,false,7010
+701004,Villuercas y Montánchez,false,7010
+711501,Noroeste de A Coruña,false,7115
+711501C,Costa - Noroeste de A Coruña,true,7115
+711502,Oeste de A Coruña,false,7115
+711502C,Costa - Oeste de A Coruña,true,7115
+711503,Interior de A Coruña,false,7115
+711504,Suroeste de A Coruña,false,7115
+711504C,Costa - Suroeste de A Coruña,true,7115
+712701,A Mariña,false,7127
+712701C,Costa - A Mariña,true,7127
+712702,Centro de Lugo,false,7127
+712703,Montaña de Lugo,false,7127
+712704,Sur de Lugo,false,7127
+713201,Noroeste de Ourense,false,7132
+713202,Miño de Ourense,false,7132
+713203,Sur de Ourense,false,7132
+713204,Montaña de Ourense,false,7132
+713205,Valdeorras,false,7132
+713601,Rias Baixas,false,7136
+713601C,Costa - Rias Baixas,true,7136
+713602,Interior de Pontevedra,false,7136
+713603,Miño de Pontevedra,false,7136
+713603C,Costa - Miño de Pontevedra,true,7136
+722801,Sierra de Madrid,false,7228
+722802,Metropolitana y Henares,false,7228
+722803,"Sur, Vegas y Oeste",false,7228
+733001,Altiplano de Murcia,false,7330
+733002,Noroeste de Murcia,false,7330
+733003,Vega del Segura,false,7330
+733004,"Valle del Guadalentín, Lorca y Águilas",false,7330
+733004C,"Costa - Valle del Guadalentín, Lorca y Águilas",true,7330
+733005,Campo de Cartagena y Mazarrón,false,7330
+733005C,Costa - Campo de Cartagena y Mazarrón,true,7330
+743101,Vertiente cantábrica de Navarra,false,7431
+743102,Centro de Navarra,false,7431
+743103,Pirineo navarro,false,7431
+743104,Ribera del Ebro de Navarra,false,7431
+750101,Cuenca del Nervión,false,7501
+750102,Llanada alavesa,false,7501
+750103,Rioja alavesa,false,7501
+752001,Gipuzkoa litoral,false,7520
+752001C,Costa - Gipuzkoa litoral,true,7520
+752002,Gipuzkoa interior,false,7520
+754801,Bizkaia litoral,false,7548
+754801C,Costa - Bizkaia litoral,true,7548
+754802,Bizkaia interior,false,7548
+762601,Ribera del Ebro de La Rioja,false,7626
+762602,Ibérica riojana,false,7626
+770301,Litoral norte de Alicante,false,7703
+770301C,Costa - Litoral norte de Alicante,true,7703
+770302,Interior de Alicante,false,7703
+770303,Litoral sur de Alicante,false,7703
+770303C,Costa - Litoral sur de Alicante,true,7703
+771201,Interior norte de Castellón,false,7712
+771202,Litoral norte de Castellón,false,7712
+771202C,Costa - Litoral norte de Castellón,true,7712
+771203,Interior sur de Castellón,false,7712
+771204,Litoral sur de Castellón,false,7712
+771204C,Costa - Litoral sur de Castellón,true,7712
+774601,Interior norte de Valencia,false,7746
+774602,Litoral norte de Valencia,false,7746
+774602C,Costa - Litoral norte de Valencia,true,7746
+774603,Interior sur de Valencia,false,7746
+774604,Litoral sur de Valencia,false,7746
+774604C,Costa - Litoral sur de Valencia,true,7746
+785101,Ceuta,false,7851
+785101C,Costa - Ceuta,true,7851
+795201,Melilla,false,7952
+795201C,Costa - Melilla,true,7952

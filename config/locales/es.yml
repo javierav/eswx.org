@@ -1,0 +1,62 @@
+es:
+  time:
+    formats:
+      short: "%d/%m %H:%M"
+      alert: "%-d %b %H:%M %Z"
+  date:
+    abbr_month_names: [~, ene, feb, mar, abr, may, jun, jul, ago, sep, oct, nov, dic]
+
+  weather_alerts:
+    back: "Volver a los avisos"
+    period: "de %{from} a %{to}"
+    probability: "probabilidad %{value}"
+    counts:
+      one: "1 aviso %{level}"
+      other: "%{count} avisos %{level}"
+    levels:
+      amarillo: "amarillo"
+      naranja: "naranja"
+      rojo: "rojo"
+    states:
+      active: "en vigor"
+      superseded: "sustituido"
+      expired: "caducado"
+      withdrawn: "retirado"
+    attributes:
+      period: "Vigencia"
+      sent: "Emitido"
+      state: "Estado"
+      parameter: "Umbral"
+      probability: "Probabilidad"
+    map:
+      label: "Mapa de las zonas de aviso de España"
+    history:
+      title: "Histórico"
+      hint: "Versiones que AEMET ha emitido para esta zona y fenómeno, en orden de emisión."
+      open: "ver"
+    index:
+      title: "Avisos meteorológicos"
+      empty: "Ahora mismo no hay ningún aviso en vigor."
+      updated_at: "Actualizado a las %{time}"
+
+  weather_zones:
+    index:
+      title: "Zonas de aviso"
+      not_found: "No hay ninguna zona terrestre en ese punto."
+    show:
+      alerts: "Avisos en vigor"
+      no_alerts: "Esta zona no tiene avisos en vigor."
+      municipalities:
+        one: "1 municipio"
+        other: "%{count} municipios"
+
+  municipalities:
+    back: "Volver al buscador"
+    index:
+      title: "Buscar por municipio"
+      label: "Municipio"
+      placeholder: "Ronda, Málaga, Gijón..."
+      submit: "Buscar"
+      empty: "Ningún municipio coincide con «%{query}»."
+    show:
+      no_alerts: "Tu municipio no tiene avisos en vigor."

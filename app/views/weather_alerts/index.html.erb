@@ -1,0 +1,3 @@
+<% content_for :title, t(".title") %>
+<%= turbo_stream_from "weather_alerts" %>
+<%= render "weather_alerts/board", board: @board %>
