@@ -1,0 +1,24 @@
+<% content_for :title, @zone.name %>
+<article class="detail">
+  <p class="detail__back"><%= link_to t("weather_alerts.back"), root_path %></p>
+  <h1><%= @zone.name %></h1>
+  <p class="detail__where"><%= @zone.weather_territory.name %> · <%= @zone.weather_territory.province.region.name %> · <%= @zone.code %></p>
+
+  <section>
+    <h2><%= t("weather_zones.show.alerts") %></h2>
+    <% if @alerts.any? %>
+      <ol class="alerts"><%= render partial: "weather_alerts/alert", collection: @alerts %></ol>
+    <% else %>
+      <p><%= t("weather_zones.show.no_alerts") %></p>
+    <% end %>
+  </section>
+
+  <section>
+    <h2><%= t("weather_zones.show.municipalities", count: @municipalities.size) %></h2>
+    <ul class="municipalities">
+      <% @municipalities.each do |municipality| %>
+        <li><%= link_to municipality.name, municipality_path(municipality) %></li>
+      <% end %>
+    </ul>
+  </section>
+</article>

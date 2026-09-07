@@ -1,9 +1,16 @@
-# Datos de referencia: la división administrativa de España según el INE.
+# Datos de referencia territoriales.
 #
-# No son datos de ejemplo. Comunidades, provincias, islas y municipios son la base
-# sobre la que se apoya todo lo demás, así que se cargan siempre.
+# Son dos divisiones distintas que se cargan juntas porque una engancha con la otra:
+# la administrativa del INE (comunidades, provincias, islas, municipios) y la de AEMET
+# para los avisos (territorios y zonas). Sin ellas no se puede colgar ningún aviso de
+# su zona, así que no son datos de ejemplo.
 #
 # Cada fuente vive en db/seeds/ como CSV, con un importador del mismo nombre al lado.
+# Las geometrías van aparte, en GeoJSON, porque no caben en una celda. Las dos
+# divisiones se enganchan por una sola columna en tres ficheros del INE: el código de
+# AEMET en regions, el territorio en islands y la zona de aviso en municipalities. Por
+# eso los territorios y las zonas se cargan en medio.
+#
 # Todo es idempotente: db:seed y db:seed:replant se pueden repetir sin miedo.
 
 require "csv"
@@ -12,7 +19,9 @@ module Seeds
   DIR = Rails.root.join("db/seeds")
 
   # El orden importa: cada fichero resuelve claves ajenas de los anteriores.
-  SOURCES = %w[regions provinces islands municipalities].freeze
+  SOURCES = %w[
+    regions provinces weather_territories weather_zones islands municipalities
+  ].freeze
 
   class << self
     def load_all
@@ -22,6 +31,8 @@ module Seeds
     end
 
     def csv(name) = CSV.read(DIR.join("#{name}.csv"), headers: true)
+
+    def json(name) = JSON.parse(DIR.join("#{name}.geojson").read)
 
     def upsert(model, rows, key)
       return if rows.empty?
@@ -49,6 +60,8 @@ module Seeds
 
       def summary
         "#{Region.count} comunidades, #{Province.count} provincias, #{Island.count} islas, " \
+          "#{WeatherTerritory.count} territorios, #{WeatherZone.count} zonas " \
+          "(#{WeatherZone.inland.count} terrestres, #{WeatherZone.offshore.count} costeras), " \
           "#{Municipality.count} municipios " \
           "(#{Municipality.where.not(island_id: nil).count} insulares)"
       end

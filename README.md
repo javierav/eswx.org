@@ -11,7 +11,7 @@ Copyright (c) 2026 Javier Aranda. Publicado bajo la licencia [AGPLv3](LICENSE).
 
 Se guarda la división administrativa de España según el INE: `Region` (01-19,
 comunidades y ciudades autónomas), `Province` (01-52), `Island` (071-384, solo Baleares
-y Canarias) y `Municipality` (8.124, con su isla cuando la tiene).
+y Canarias) y `Municipality` (8.132, con su isla cuando la tiene).
 
 Cada fuente vive en `db/seeds/` como un CSV con su importador del mismo nombre al
 lado, y los carga `db/seeds.rb` en orden, así que `db:setup`, `db:reset` y `bin/setup`

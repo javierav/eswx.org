@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://www.aemet.es/es/eltiempo/prediccion/avisos</id>
+  <title>AEMET - Avisos de fenómenos meteorológicos adversos - España</title>
+  <updated>2026-09-06T18:55:20+00:00</updated>
+  <entry>
+    <title>Estado completo de avisos para España</title>
+    <link href="https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/cap/Z_CAP_C_LEMM_20260906185520_AFAE.tar.gz"/>
+    <updated>2026-09-06T18:55:20+00:00</updated>
+  </entry>
+  <entry>
+    <title>Aviso. Nivel amarillo. Temperaturas máximas. Pirineo navarro</title>
+    <link href="https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/cap/Z_CAP_C_LEMM_20260906185520_AFAZ743103ATTA0719.xml"/>
+    <updated>2026-09-06T18:55:20+00:00</updated>
+  </entry>
+</feed>

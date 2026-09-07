@@ -8,3 +8,144 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+:root {
+  --ink: #16191d;
+  --muted: #5d6672;
+  --paper: #f7f8fa;
+  --card: #ffffff;
+  --line: #dfe3e8;
+  --land: #e6eaef;
+  --sea: #f7f8fa;
+  --amarillo: #f4d03f;
+  --naranja: #ef8b3b;
+  --rojo: #d94436;
+  --land-hover: #c9d1db;
+  --amarillo-hover: #dbb520;
+  --naranja-hover: #d67222;
+  --rojo-hover: #bd3225;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e9ecf1;
+    --muted: #98a2b1;
+    --paper: #14171c;
+    --card: #1b1f26;
+    --line: #2b313a;
+    --land: #262c35;
+    --sea: #14171c;
+    /* Sobre fondo oscuro el resaltado aclara en vez de oscurecer. */
+    --land-hover: #3c4552;
+    --amarillo-hover: #f8dd72;
+    --naranja-hover: #f4a469;
+    --rojo-hover: #e56d60;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 1.5rem 1rem 4rem;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.board, .detail { max-width: 68rem; margin: 0 auto; }
+h1 { font-size: 1.6rem; margin: 0 0 .35rem; }
+h2 { font-size: 1.1rem; margin: 2rem 0 .6rem; }
+a { color: inherit; }
+
+.board__header { margin-bottom: 1rem; }
+.board__summary { margin: 0; display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.board__updated { color: var(--muted); font-size: .85rem; }
+
+.tag {
+  display: inline-block;
+  padding: .1rem .55rem;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 600;
+  color: #16191d;
+  background: var(--line);
+}
+.tag--amarillo { background: var(--amarillo); }
+.tag--naranja { background: var(--naranja); }
+.tag--rojo { background: var(--rojo); color: #fff; }
+
+/* Mapa */
+.map {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1rem 0 2rem;
+  background: var(--sea);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.map__inset { fill: none; stroke: var(--line); stroke-width: 2; stroke-dasharray: 6 5; }
+.map__zone {
+  fill: var(--land);
+  stroke: var(--sea);
+  stroke-width: 1;
+  stroke-linejoin: round;
+  transition: fill .15s;
+}
+.map__zone--amarillo { fill: var(--amarillo); }
+.map__zone--naranja { fill: var(--naranja); }
+.map__zone--rojo { fill: var(--rojo); }
+/* SVG se pinta en orden de documento y no tiene z-index, así que un trazo sobre la
+   zona señalada lo tapan las vecinas que se dibujan después y el contorno sale a
+   medias. Se resalta cambiando solo el relleno, que no puede salirse de la zona;
+   un filter valdría, pero teñiría también el trazo y dejaría un halo igual de roto. */
+.map a:hover .map__zone,
+.map a:focus-visible .map__zone { fill: var(--land-hover); }
+.map a:hover .map__zone--amarillo,
+.map a:focus-visible .map__zone--amarillo { fill: var(--amarillo-hover); }
+.map a:hover .map__zone--naranja,
+.map a:focus-visible .map__zone--naranja { fill: var(--naranja-hover); }
+.map a:hover .map__zone--rojo,
+.map a:focus-visible .map__zone--rojo { fill: var(--rojo-hover); }
+
+/* Listado de avisos */
+.alerts { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
+.alert {
+  display: flex;
+  gap: .75rem;
+  align-items: flex-start;
+  padding: .75rem .9rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--line);
+  border-radius: 8px;
+}
+.alert--amarillo { border-left-color: var(--amarillo); }
+.alert--naranja { border-left-color: var(--naranja); }
+.alert--rojo { border-left-color: var(--rojo); }
+.alert__body { min-width: 0; }
+.alert__title { font-size: 1rem; margin: 0; }
+.alert__zone { color: var(--muted); font-weight: 400; }
+.alert__meta, .alert__parameter { margin: .15rem 0 0; color: var(--muted); font-size: .875rem; }
+
+/* Detalle */
+.detail__back { margin: 0 0 1rem; font-size: .9rem; }
+.detail__where { color: var(--muted); margin: 0 0 1rem; }
+.detail__facts { display: grid; grid-template-columns: auto 1fr; gap: .3rem 1rem; margin: 0 0 1.5rem; }
+.detail__facts dt { color: var(--muted); }
+.detail__facts dd { margin: 0; }
+.detail__instruction { padding: .75rem .9rem; background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
+
+.history__hint { color: var(--muted); font-size: .9rem; margin: 0 0 .5rem; }
+.history li { margin-bottom: .3rem; }
+.history__item--superseded, .history__item--withdrawn { color: var(--muted); }
+
+/* Listas y buscador */
+.municipalities, .zones { list-style: none; margin: 0; padding: 0; columns: 16rem; }
+.municipalities li, .zones li { break-inside: avoid; margin-bottom: .2rem; }
+.municipalities__province, .zones__territory { color: var(--muted); font-size: .85rem; }
+.search { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.search input[type="search"] { padding: .45rem .6rem; border: 1px solid var(--line); border-radius: 6px; background: var(--card); color: inherit; min-width: 16rem; }
+.search input[type="submit"] { padding: .45rem .9rem; border: 1px solid var(--line); border-radius: 6px; background: var(--card); color: inherit; cursor: pointer; }
+.notice { color: var(--muted); }

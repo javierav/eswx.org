@@ -1,15 +1,19 @@
-# examples:
-#   periodic_cleanup:
-#     class: CleanSoftDeletedRecordsJob
-#     queue: background
-#     args: [ 1000, { batch_size: 500 } ]
-#     schedule: every hour
-#   periodic_cleanup_with_command:
-#     command: "SoftDeletedRecord.due.delete_all"
-#     priority: 2
-#     schedule: at 5am every day
+# Programación de Solid Queue.
+#
+# AEMET no ofrece push: hay que consultar su canal Atom. Cada tres minutos es
+# suficiente, porque solo reelabora los avisos cuando cambia el estado, y el propio
+# job se ahorra la descarga del tar.gz si el canal no se ha movido.
+shared: &shared
+  refresh_weather_alerts:
+    class: RefreshWeatherAlertsJob
+    queue: default
+    schedule: every 3 minutes
+
+development:
+  <<: *shared
 
 production:
+  <<: *shared
   clear_solid_queue_finished_jobs:
     command: "SolidQueue::Job.clear_finished_in_batches(sleep_between_batches: 0.3)"
     schedule: every hour at minute 12

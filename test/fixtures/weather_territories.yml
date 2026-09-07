@@ -1,0 +1,20 @@
+navarra:
+  code: "7431"
+  name: Navarra
+  province: navarra
+
+cadiz:
+  code: "6111"
+  name: Cádiz
+  province: cadiz
+
+gran_canaria:
+  code: "6590"
+  name: Gran Canaria
+  province: las_palmas
+
+# AEMET mete las dos islas en un solo territorio; el INE las separa.
+ibiza_formentera:
+  code: "6453"
+  name: Ibiza y Formentera
+  province: baleares

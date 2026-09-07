@@ -1,0 +1,11 @@
+<% content_for :title, t(".title") %>
+<article class="detail">
+  <p class="detail__back"><%= link_to t("weather_alerts.back"), root_path %></p>
+  <h1><%= t(".title") %></h1>
+  <% if flash.now[:notice] %><p class="notice"><%= flash.now[:notice] %></p><% end %>
+  <ul class="zones">
+    <% @zones.each do |zone| %>
+      <li><%= link_to zone.name, weather_zone_path(zone) %> <span class="zones__territory"><%= zone.weather_territory.name %></span></li>
+    <% end %>
+  </ul>
+</article>

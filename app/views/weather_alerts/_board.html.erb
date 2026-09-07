@@ -1,0 +1,24 @@
+<div id="weather_alerts_board" class="board">
+  <header class="board__header">
+    <h1><%= t("weather_alerts.index.title") %></h1>
+    <p class="board__summary">
+      <% if board.any? %>
+        <% WeatherAlert::LEVELS.reverse_each do |level| %>
+          <% next unless board.counts[level] %>
+          <span class="tag tag--<%= level %>">
+            <%= t("weather_alerts.counts", count: board.counts[level], level: t("weather_alerts.levels.#{level}")) %>
+          </span>
+        <% end %>
+      <% else %>
+        <%= t("weather_alerts.index.empty") %>
+      <% end %>
+      <span class="board__updated"><%= t("weather_alerts.index.updated_at", time: l(board.at, format: :short)) %></span>
+    </p>
+  </header>
+
+  <%= render "weather_alerts/map", board: board %>
+
+  <ol class="alerts">
+    <%= render partial: "weather_alerts/alert", collection: board.alerts %>
+  </ol>
+</div>

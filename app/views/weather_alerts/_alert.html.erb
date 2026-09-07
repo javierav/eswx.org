@@ -1,0 +1,15 @@
+<li id="<%= dom_id(alert) %>" class="alert alert--<%= alert.level %>">
+  <span class="alert__level tag tag--<%= alert.level %>"><%= t("weather_alerts.levels.#{alert.level}") %></span>
+  <div class="alert__body">
+    <h2 class="alert__title">
+      <%= link_to alert.phenomenon_name, weather_alert_path(alert) %>
+      <%= link_to alert.weather_zone.name, weather_zone_path(alert.weather_zone), class: "alert__zone" %>
+    </h2>
+    <p class="alert__meta">
+      <%= alert.weather_zone.weather_territory.name %> ·
+      <%= alert_period(alert) %>
+      <% if alert.probability.present? %> · <%= t("weather_alerts.probability", value: alert.probability) %><% end %>
+    </p>
+    <% if alert.parameter.present? %><p class="alert__parameter"><%= alert.parameter %></p><% end %>
+  </div>
+</li>

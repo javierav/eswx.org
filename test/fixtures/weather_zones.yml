@@ -1,0 +1,79 @@
+# Geometrías sintéticas, cuadrados alrededor de la posición real de cada zona: es lo
+# que necesitan las pruebas de búsqueda por punto. Las de verdad las cargan las
+# semillas de db/seeds/.
+pirineo_navarro:
+  code: "743103"
+  name: Pirineo navarro
+  coastal: false
+  weather_territory: navarra
+  geometry:
+    type: Polygon
+    coordinates:
+      - [[-2.0, 42.5], [-1.0, 42.5], [-1.0, 43.5], [-2.0, 43.5], [-2.0, 42.5]]
+  svg_path: "M0,0L10,0 10,10 0,10Z"
+  min_lat: 42.5
+  max_lat: 43.5
+  min_lng: -2.0
+  max_lng: -1.0
+
+# Con un agujero en el centro, para comprobar que un punto de dentro queda fuera.
+campina_gaditana:
+  code: "611102"
+  name: Campiña gaditana
+  coastal: false
+  weather_territory: cadiz
+  geometry:
+    type: Polygon
+    coordinates:
+      - [[-6.5, 36.0], [-5.5, 36.0], [-5.5, 37.0], [-6.5, 37.0], [-6.5, 36.0]]
+      - [[-6.2, 36.3], [-5.8, 36.3], [-5.8, 36.7], [-6.2, 36.7], [-6.2, 36.3]]
+  svg_path: "M20,0L30,0 30,10 20,10Z"
+  min_lat: 36.0
+  max_lat: 37.0
+  min_lng: -6.5
+  max_lng: -5.5
+
+litoral_gaditano:
+  code: "611103C"
+  name: Costa - Litoral gaditano
+  coastal: true
+  weather_territory: cadiz
+  geometry:
+    type: Polygon
+    coordinates:
+      - [[-7.5, 36.0], [-6.5, 36.0], [-6.5, 37.0], [-7.5, 37.0], [-7.5, 36.0]]
+  svg_path: "M40,0L50,0 50,10 40,10Z"
+  min_lat: 36.0
+  max_lat: 37.0
+  min_lng: -7.5
+  max_lng: -6.5
+
+gran_canaria:
+  code: "659001"
+  name: Este, sur y oeste de Gran Canaria
+  coastal: false
+  weather_territory: gran_canaria
+  geometry:
+    type: Polygon
+    coordinates:
+      - [[-16.0, 27.7], [-15.3, 27.7], [-15.3, 28.3], [-16.0, 28.3], [-16.0, 27.7]]
+  svg_path: "M60,0L70,0 70,10 60,10Z"
+  min_lat: 27.7
+  max_lat: 28.3
+  min_lng: -16.0
+  max_lng: -15.3
+
+ibiza_formentera:
+  code: "645301"
+  name: Ibiza y Formentera
+  coastal: false
+  weather_territory: ibiza_formentera
+  geometry:
+    type: Polygon
+    coordinates:
+      - [[1.2, 38.6], [1.7, 38.6], [1.7, 39.1], [1.2, 39.1], [1.2, 38.6]]
+  svg_path: "M80,0L90,0 90,10 80,10Z"
+  min_lat: 38.6
+  max_lat: 39.1
+  min_lng: 1.2
+  max_lng: 1.7

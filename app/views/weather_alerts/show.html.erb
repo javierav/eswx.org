@@ -1,0 +1,42 @@
+<% content_for :title, @alert.headline %>
+<article class="detail">
+  <p class="detail__back"><%= link_to t("weather_alerts.back"), root_path %></p>
+  <h1>
+    <span class="tag tag--<%= @alert.level %>"><%= t("weather_alerts.levels.#{@alert.level}") %></span>
+    <%= @alert.event %>
+  </h1>
+  <p class="detail__where">
+    <%= link_to @alert.weather_zone.name, weather_zone_path(@alert.weather_zone) %>,
+    <%= @alert.weather_zone.weather_territory.name %>
+  </p>
+
+  <dl class="detail__facts">
+    <dt><%= t("weather_alerts.attributes.period") %></dt><dd><%= alert_period(@alert) %></dd>
+    <dt><%= t("weather_alerts.attributes.sent") %></dt><dd><%= alert_time(@alert, @alert.sent) %></dd>
+    <dt><%= t("weather_alerts.attributes.state") %></dt><dd><%= t("weather_alerts.states.#{@alert.state}") %></dd>
+    <% if @alert.parameter.present? %>
+      <dt><%= t("weather_alerts.attributes.parameter") %></dt><dd><%= @alert.parameter %></dd>
+    <% end %>
+    <% if @alert.probability.present? %>
+      <dt><%= t("weather_alerts.attributes.probability") %></dt><dd><%= @alert.probability %></dd>
+    <% end %>
+  </dl>
+
+  <% if @alert.description.present? %><p class="detail__description"><%= @alert.description %></p><% end %>
+  <% if @alert.instruction.present? %><p class="detail__instruction"><%= @alert.instruction %></p><% end %>
+
+  <section class="history">
+    <h2><%= t("weather_alerts.history.title") %></h2>
+    <p class="history__hint"><%= t("weather_alerts.history.hint") %></p>
+    <ol>
+      <% @history.each do |version| %>
+        <li class="history__item history__item--<%= version.state %>">
+          <span class="tag tag--<%= version.level %>"><%= t("weather_alerts.levels.#{version.level}") %></span>
+          <%= alert_time(version, version.sent) %> ·
+          <%= t("weather_alerts.states.#{version.state}") %>
+          <%= link_to t("weather_alerts.history.open"), weather_alert_path(version) unless version == @alert %>
+        </li>
+      <% end %>
+    </ol>
+  </section>
+</article>

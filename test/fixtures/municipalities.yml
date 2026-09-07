@@ -3,18 +3,21 @@ jerez:
   name: Jerez de la Frontera
   normalized_name: jerez de la frontera
   province: cadiz
+  weather_zone: campina_gaditana
 
 alcala:
   ine_code: "11002"
   name: Alcalá del Valle
   normalized_name: alcala del valle
   province: cadiz
+  weather_zone: campina_gaditana
 
 burguete:
   ine_code: "31058"
   name: Auritz/Burguete
   normalized_name: auritz/burguete
   province: navarra
+  weather_zone: pirineo_navarro
 
 # Municipio insular: lleva isla, a diferencia de los peninsulares.
 sant_antoni:
@@ -23,3 +26,4 @@ sant_antoni:
   normalized_name: sant antoni de portmany
   province: baleares
   island: ibiza
+  weather_zone: ibiza_formentera

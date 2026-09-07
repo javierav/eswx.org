@@ -396,6 +396,7 @@ DEPENDENCIES
   image_processing (~> 2.0)
   importmap-rails
   jbuilder
+  nokogiri
   pg (~> 1.1)
   propshaft
   puma (>= 7.1)
